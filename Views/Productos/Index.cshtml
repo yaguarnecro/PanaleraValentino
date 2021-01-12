@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="Titulo_inicial">Productos</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Productos/Crear" role="button"> Crear Nuevo Producto</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de Productos
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>IdProducto</th>
+                   <th>Nombre</th>
+                   <th>Costo</th>
+                   <th>Existencia </th>
+                   <th>Estado</th>
+                   <th>Tipo</th>
+                   <th>Tamaño</th>
+                   <th>Empaque</th>
+                   <th>PuntoMaximo</th>
+                   <th>PuntoReorden</th>
+                   <th>PuntoMinimo</th>
+                   <th>Clasificacion</th>
+                   <th>FechaVencimiento</th>
+                   <th>Nombre Categoria</th>
+               </tr>
+           </thead>
+
+    @foreach (var cat in Model)
+    {
+
+    <tr>
+
+        <td> @cat.IdProducto </td>
+        <td> @cat.Nombre </td>
+        <td> @cat.Costo </td>
+        <td> @cat.Existencia </td>
+        <td> @cat.Estado </td>
+        <td> @cat.Tipo </td>
+        <td> @cat.Tamaño </td>
+        <td> @cat.Empaque </td>
+        <td> @cat.PuntoMaximo </td>
+        <td> @cat.PuntoMinimo </td>
+        <td> @cat.PuntoMinimo </td>
+        <td> @cat.Clasificacion </td>
+        <td> @cat.FechaVencimiento </td>
+       <td>
+           @foreach (var Cag in cat.CategoriasProducto)
+           {
+               <li>@Cag.Categorias.Nombre </li>
+           }
+
+       </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Productos/Editar/@cat.IdProducto" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/Productos/Detalles/@cat.IdProducto" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Productos/Eliminar/@cat.IdProducto" role="button">Eliminar</a> </td>
+
+    </tr>
+    }
+    </table>
+</div>

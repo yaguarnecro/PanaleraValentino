@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+
+    <form action="/Garantia/Modificar" method="post">
+
+        <div class="form-group">
+            <label for="id"> IdGarantia: </label>
+            <label for="id" name="IdGarantia">@Model.IdGarantia </label>
+            <input type="hidden" name="IdGarantia" value="@Model.IdGarantia" />
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion"> Descripcion: </label>
+            <input type="text" class="form-control" name="Descripcion" id="Descripcion" value="@Model.Descripcion" />
+        </div>
+
+        <div class="form-group">
+            <label for="estadoactivo"> EstadoActivo: </label>
+            <input type="text" class="form-control" name="EstadoActivo" id="EstadoActivo" value="@Model.EstadoActivo" />
+        </div>
+
+
+        <div class="form-group">
+            <p> <button class="btn btn-primary btn-lg" type="submit" role="button"> Guardar</button></p>
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Garantia/Index" role="button">Cancelar </a>
+        </div>
+
+    </form>
+
+</div>

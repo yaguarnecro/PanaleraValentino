@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+
+    <form>
+
+        <div class="form-group">
+            <label for="id"> IdEmpleado: </label>
+            <label for="id" name="IdEmpleado">@Model.IdEmpleado </label>
+            <input type="hidden" name="IdEmpleado" value="@Model.IdEmpleado" />
+        </div>
+
+        <div class="form-group">
+
+            <label for="primerNombre"> Primer Nombre: </label>
+            <label for="primerNombre" name="PrimerNombre">@Model.PrimerNombre </label>
+            <input type="hidden" name="PrimerNombre" value="@Model.PrimerNombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="segundonombre"> Segundo Nombre: </label>
+            <label for="segundonombre" name="SegundoNombre">@Model.SegundoNombre </label>
+            <input type="hidden" name="SegundoNombre" value="@Model.SegundoNombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="primerapellido"> Primer Apellido: </label>
+            <label for="primerapellido" name="PrimerApellido">@Model.PrimerApellido </label>
+            <input type="hidden" name="PrimerApellido" value="@Model.PrimerApellido" />
+        </div>
+
+
+        <div class="form-group">
+            <label for="segundoapellido"> Segundo Apellido: </label>
+            <label for="segundoapellido" name="SegundoApellido">@Model.SegundoApellido </label>
+            <input type="hidden" name="SegundoApellido" value="@Model.SegundoApellido" />
+        </div>
+
+
+        <div class="form-group">
+            <label for="edad"> Edad: </label>
+            <label for="edad" name="Edad">@Model.Edad </label>
+            <input type="hidden" name="Edad" value="@Model.Edad" />
+        </div>
+
+
+        <div class="form-group">
+            <label for="telefono"> Telefono: </label>
+            <label for="telefono" name="Telefono">@Model.Telefono </label>
+            <input type="hidden" name="Telefono" value="@Model.Telefono" />
+        </div>
+
+
+        <div class="form-group">
+            <label for="direccion"> Direccion: </label>
+            <label for="direccion" name="Direccion">@Model.Direccion </label>
+            <input type="hidden" name="Direccion" value="@Model.Direccion" />
+        </div>
+
+
+        <div class="form-group">
+            <label for="tipoempleado"> TipoEmpleado: </label>
+            <label for="tipoempleado" name="TipoEmpleado">@Model.TipoEmpleado </label>
+            <input type="hidden" name="TipoEmpleado" value="@Model.TipoEmpleado" />
+        </div>
+
+     
+
+
+
+
+    </form>
+
+</div>
+
+
+

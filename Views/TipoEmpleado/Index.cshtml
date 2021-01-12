@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="Titulo_inicial">Tipo Empleados</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/TipoEmpleado/Crear" role="button"> Crear Nuevo TipoEmpleados</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de TipoEmpleados
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>IdTipoEmpleado</th>
+                   <th>Descripcion</th>
+                   <th>
+                   <th>
+               </tr>
+           </thead>
+
+    @foreach (var cat in Model)
+    {
+
+    <tr>
+
+        <td> @cat.IdTipoEmpleado </td>
+        <td> @cat.Descripcion </td>
+
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/TipoEmpleado/Editar/@cat.IdTipoEmpleado" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/TipoEmpleado/Detalles/@cat.IdTipoEmpleado" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/TipoEmpleado/Eliminar/@cat.IdTipoEmpleado" role="button">Eliminar</a> </td>
+
+    </tr>
+    }
+    </table>
+</div>
+
+

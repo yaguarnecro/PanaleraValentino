@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="Titulo_inicial">Garantias</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Garantia/Crear" role="button"> Crear Nueva Garantia</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de Garantias
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>IdGarantia</th>
+                   <th>Descripcion</th>
+                   <th>EstadoActivo</th>
+                 
+                   <th>
+                   <th>
+               </tr>
+           </thead>
+
+    @foreach (var cat in Model)
+    {
+
+    <tr>
+
+        <td> @cat.IdGarantia </td>
+        <td> @cat.Descripcion </td>
+        <td> @cat.EstadoActivo </td>
+     
+
+        <td> <a class="btn btn-primary btn-lg " href="/Garantia/Editar/@cat.IdGarantia" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/Garantia/Detalles/@cat.IdGarantia" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Garantia/Eliminar/@cat.IdGarantia" role="button">Eliminar</a> </td>
+
+    </tr>
+    }
+    </table>
+</div>

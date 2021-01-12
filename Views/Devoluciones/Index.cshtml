@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="Titulo_inicial">Devoluciones</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Devoluciones/Crear" role="button"> Crear Nueva Devolucion</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de Devoluciones
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>IdDevolucion</th>
+                   <th>IdGarantia</th>
+                   <th>IdProducto</th>
+                   <th>Estado</th>
+                   <th>ValorDevuelto</th>
+                  
+                   <th></th>
+                   <th></th>
+               </tr>
+           </thead>
+
+    @foreach (var dev in Model)
+    {
+
+    <tr>
+
+        <td> @dev.IdDevolucion </td>
+        <td> @dev.IdGarantia </td>
+        <td> @dev.IdProducto </td>
+        <td> @dev.Estado </td>
+        <td> @dev.ValorDevuelto </td>
+     
+
+        <td> <a class="btn btn-primary btn-lg " href="/Devoluciones/Editar/@dev.IdDevolucion" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/Devoluciones/Detalles/@dev.IdDevolucion" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Devoluciones/Eliminar/@dev.IdDevolucion" role="button">Eliminar</a> </td>
+
+    </tr>
+    }
+    </table>
+</div>
+

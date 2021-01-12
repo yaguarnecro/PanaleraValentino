@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="Titulo_inicial">Categorias</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Categorias/Crear" role="button"> Crear Nueva Categoria</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de categorias
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>IdCategoria</th>
+                   <th>Nombre</th>
+                   <th>Ubicacion</th>
+                   <th>Nombre Producto </th>
+                   <th>
+                   <th>
+               </tr>
+           </thead>
+
+    @foreach (var cat in Model)
+    {
+
+    <tr>
+
+        <td> @cat.IdCategoria </td>
+        <td> @cat.Nombre </td>
+        <td> @cat.Ubicacion </td>
+       <td>
+           @foreach (var Cag in cat.CategoriasProducto)
+           {
+               <li>@Cag.Productos.Nombre</li>
+           }
+
+       </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Categorias/Editar/@cat.IdCategoria" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/Categorias/Detalles/@cat.IdCategoria" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Categorias/Eliminar/@cat.IdCategoria" role="button">Eliminar</a> </td>
+
+    </tr>
+    }
+    </table>
+</div>

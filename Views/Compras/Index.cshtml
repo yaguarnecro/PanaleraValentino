@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="Titulo_inicial">Compras</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Compras/Crear" role="button"> Crear Nueva Compra</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de compras
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+    <thead>
+    <tr>
+    <th>IdCompra</th>
+    <th>IdProveedor</th>
+    <th>IdProducto</th>
+    <th>IdEmpleado</th>
+    <th>Cantidad</th>
+    <th>Fecha</th>
+    <th>PrecioTotal</th>
+
+    </tr>
+    </thead>
+
+    @foreach (var lol in Model)
+    {
+
+        <tr>
+
+        <td> @lol.IdCompra </td>
+        <td> @lol.IdProveedor </td>
+        <td> @lol.IdProducto </td>
+        <td> @lol.IdEmpleado </td>
+        <td> @lol.Cantidad </td>
+        <td> @lol.Fecha </td>
+        <td> @lol.PrecioTotal</td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/Compras/Editar/@lol.IdCompra" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/Compras/Detalles/@lol.IdCompra" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/Compras/Eliminar/@lol.IdCompra" role="button">Eliminar</a> </td>
+
+        </tr>
+    }
+    </table>
+</div>

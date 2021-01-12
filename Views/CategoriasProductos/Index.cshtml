@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="Titulo_inicial">CategoriasProductos</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/CategoriasProductos/Crear" role="button"> Crear Nueva CategoriaProducto</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de categorias Productos
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>IdCatProductos</th>
+                   <th>IdCategoria </th>
+                   <th>IdProducto</th>
+                   <th>
+                   <th>
+               </tr>
+           </thead>
+
+    @foreach (var catt in Model)
+    {
+    
+    <tr>
+        <td> @catt.IdCatProductos </td>
+        <td> @catt.IdCategoria </td>
+        <td> @catt.IdProducto </td>
+       
+      
+
+        <td> <a class="btn btn-primary btn-lg " href="/CategoriasProductos/Editar/@catt.IdCatProductos" role="button">Editar</a> </td>
+
+
+        <td> <a class="btn btn-primary btn-lg " href="/CategoriasProductos/Detalles/@catt.IdCatProductos" target="_blank" role="button">Detalles</a> </td>
+
+        <td> <a class="btn btn-primary btn-lg " href="/CategoriasProductos/Eliminar/@catt.IdCatProductos" role="button">Eliminar</a> </td>
+
+    </tr>
+    }
+    </table>
+</div>

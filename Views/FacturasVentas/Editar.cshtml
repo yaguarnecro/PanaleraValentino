@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+
+    <form action="/FacturasVentas/Modificar" method="post">
+
+        <div class="form-group">
+            <label for="id"> IdFacturaVenta: </label>
+            <label for="id" name="IdFacturaVenta">@Model.IdFacturaVenta </label>
+            <input type="hidden" name="IdFacturaVenta" value="@Model.IdFacturaVenta" />
+        </div>
+
+        <div class="form-group">
+            <label for="idproducto"> IdProducto: </label>
+            <input type="text" class="form-control" name="IdProducto" id="IdProducto" value="@Model.IdProducto" />
+        </div>
+
+        <div class="form-group">
+            <label for="idempleado"> IdEmpleado: </label>
+            <input type="text" class="form-control" name="IdEmpleado" id="IdEmpleado" value="@Model.IdEmpleado" />
+        </div>
+        <div class="form-group">
+            <label for="cedulacliente"> CedulaCliente: </label>
+            <input type="text" class="form-control" name="CedulaCliente" id="CedulaCliente" value="@Model.CedulaCliente" />
+        </div>
+
+        <div class="form-group">
+            <label for="precioproducto"> PrecioProducto: </label>
+            <input type="text" class="form-control" name="PrecioProducto" id="PrecioProducto" value="@Model.PrecioProducto" />
+        </div>
+
+        <div class="form-group">
+            <label for="cantidad"> Cantidad: </label>
+            <input type="text" class="form-control" name="Cantidad" id="Cantidad" value="@Model.Cantidad" />
+        </div>
+
+        <div class="form-group">
+            <label for="preciototal"> PrecioTotal: </label>
+            <input type="text" class="form-control" name="PrecioTotal" id="PrecioTotal" value="@Model.PrecioTotal" />
+        </div>
+
+        <div class="form-group">
+            <label for="iva"> Iva: </label>
+            <input type="text" class="form-control" name="Iva" id="Iva" value="@Model.Iva" />
+        </div>
+
+        <div class="form-group">
+            <label for="fecha"> Fecha: </label>
+            <input type="text" class="form-control" name="Fecha" id="Fecha" value="@Model.Fecha" />
+        </div>
+
+
+        <div class="form-group">
+            <p> <button class="btn btn-primary btn-lg" type="submit" role="button"> Guardar</button></p>
+            <br />
+            <a class="btn btn-primary btn-lg" href="/FacturaVentas/Index" role="button">Cancelar </a>
+        </div>
+
+    </form>
+
+</div>

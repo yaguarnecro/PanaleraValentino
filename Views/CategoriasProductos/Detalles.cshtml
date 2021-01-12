@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+<div>
+
+    <form>
+
+        <div class="form-group">
+            <label for="idcp"> IdCatProductos: </label>
+            <label for="idcp" name="IdCatProductos">@Model.IdCatProductos </label>
+            <input type="hidden" name="IdCatProductos" value="@Model.IdCategoria" />
+        </div>
+
+        <div class="form-group">
+
+            <label for="idc"> IdCategoria: </label>
+            <label for="idc" name="IdCategoria">@Model.IdCategoria </label>
+            <input type="hidden" name="IdCategoria" value="@Model.IdCategoria" />
+        </div>
+
+        <div class="form-group">
+            <label for="idp"> IdProducto: </label>
+            <label for="idp" name="IdProducto">@Model.IdProducto </label>
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+        </div>
+
+
+
+    </form>
+
+</div>
+
+
+

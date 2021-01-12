@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+
+    <form>
+
+        <div class="form-group">
+            <label for="id"> IdProducto: </label>
+            <label for="id" name="IdProducto">@Model.IdProducto </label>
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+        </div>
+
+        <div class="form-group">
+
+            <label for="Nombre"> Nombre: </label>
+            <label for="Nombre" name="Nombre">@Model.Nombre </label>
+            <input type="hidden" name="Nombre" value="@Model.Nombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="Costo"> Costo: </label>
+            <label for="Costo" name="Costo">@Model.Costo </label>
+            <input type="hidden" name="Costo" value="@Model.Costo" />
+        </div>
+
+        <div class="form-group">
+            <label for="Existencia"> Existencia: </label>
+            <label for="Existencia" name="Existencia">@Model.Existencia </label>
+            <input type="hidden" name="Existencia" value="@Model.Existencia" />
+        </div>
+
+        <div class="form-group">
+            <label for="Estado"> Estado: </label>
+            <label for="Estado" name="Estado">@Model.Estado </label>
+            <input type="hidden" name="Estado" value="@Model.Estado" />
+        </div>
+
+        <div class="form-group">
+            <label for="Tipo"> Tipo: </label>
+            <label for="Tipo" name="Tipo">@Model.Tipo </label>
+            <input type="hidden" name="Tipo" value="@Model.Tipo" />
+        </div>
+
+        <div class="form-group">
+            <label for="Tamaño"> Tamaño: </label>
+            <label for="Tamaño" name="Tamaño">@Model.Tamaño </label>
+            <input type="hidden" name="Tamaño" value="@Model.Tamaño" />
+        </div>
+
+        <div class="form-group">
+            <label for="Empaque"> Empaque: </label>
+            <label for="Empaque" name="Empaque">@Model.Empaque </label>
+            <input type="hidden" name="Empaque" value="@Model.Empaque" />
+        </div>
+
+        <div class="form-group">
+            <label for="PuntoMaximo"> PuntoMaximo: </label>
+            <label for="PuntoMaximo" name="PuntoMaximo">@Model.PuntoMaximo </label>
+            <input type="hidden" name="PuntoMaximo" value="@Model.PuntoMaximo" />
+        </div>
+
+        <div class="form-group">
+            <label for="PuntoReorden"> PuntoReorden: </label>
+            <label for="PuntoReorden" name="PuntoReorden">@Model.PuntoReorden </label>
+            <input type="hidden" name="PuntoReorden" value="@Model.PuntoReorden" />
+        </div>
+
+        <div class="form-group">
+            <label for="PuntoMinimo"> PuntoMinimo: </label>
+            <label for="PuntoMinimo" name="PuntoMinimo">@Model.PuntoMinimo </label>
+            <input type="hidden" name="PuntoMinimo" value="@Model.PuntoMinimo" />
+        </div>
+
+        <div class="form-group">
+            <label for="Clasificacion"> Clasificacion: </label>
+            <label for="Clasificacion" name="Clasificacion">@Model.Clasificacion </label>
+            <input type="hidden" name="Clasificacion" value="@Model.Clasificacion" />
+        </div>
+
+        <div class="form-group">
+            <label for="FechaVencimiento"> FechaVencimiento: </label>
+            <label for="FechaVencimiento" name="FechaVencimiento">@Model.FechaVencimiento </label>
+            <input type="hidden" name="EstadoActivo" value="@Model.FechaVencimiento" />
+        </div>
+
+
+
+    </form>
+
+</div>
+
+

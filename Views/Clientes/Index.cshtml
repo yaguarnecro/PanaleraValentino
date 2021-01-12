@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<h2 class="Titulo_inicial">Clientes</h2>
+<br />
+<div class="row">
+    <div class="col-lg-9">
+        <h2> Inicio </h2>
+    </div>
+
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Clientes/Crear" role="button"> Crear Nuevo Cliente</a></p>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Lista de Clientes
+    </div>
+
+    <!--- La Tabla -->
+    <table class="table"
+           <thead>
+               <tr>
+                   <th>Cedula</th>
+                   <th>IdTipocliente</th>
+                   <th>PrimerNombre</th>
+                   <th>SegundoNombre </th>
+                   <th>PrimerApellido</th>
+                   <th>SegundoApellido</th>
+                   <th>Telefono</th>
+                   <th>CorreoElectronico</th>
+                 
+                   <th>
+               </tr>
+           </thead>
+
+    @foreach (var clak in Model)
+    {
+
+    <tr>
+
+        <td> @clak.Cedula </td>
+        <td> @clak.IdTipocliente </td>
+        <td> @clak.PrimerNombre </td>
+        <td> @clak.SegundoNombre </td>
+        <td> @clak.PrimerApellido </td>
+        <td> @clak.SegundoApellido </td>
+        <td> @clak.Telefono </td>
+        <td> @clak.CorreoElectronico </td>
+       
+
+
+    </tr>
+
+    }
+
+
+    </table>
+
+    <br />
+    <table
+
+            <thead>
+
+            </thead>
+           @foreach (var clak in Model)
+           {
+            <tr>
+                <td> <a class="btn btn-primary btn-lg " href="/Clientes/Editar/@clak.Cedula" role="button">Editar</a> </td>
+
+
+                <td> <a class="btn btn-primary btn-lg " href="/Clientes/Detalles/@clak.Cedula" target="_blank" role="button">Detalles</a> </td>
+
+                <td> <a class="btn btn-primary btn-lg " href="/Clientes/Eliminar/@clak.Cedula" role="button">Eliminar</a> </td>
+            </tr>
+           }
+    </table>
+</div>
+

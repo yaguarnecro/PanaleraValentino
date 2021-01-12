@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+<div>
+
+    <form>
+
+        <div class="form-group">
+            <label for="id"> IdDevolucion: </label>
+            <label for="id" name="IdDevolucion">@Model.IdDevolucion </label>
+            <input type="hidden" name="IdDevolucion" value="@Model.IdDevolucion" />
+        </div>
+
+        <div class="form-group">
+
+            <label for="idgarantia"> IdGarantia: </label>
+            <label for="idgarantia" name="IdGarantia">@Model.IdGarantia </label>
+            <input type="hidden" name="IdGarantia" value="@Model.IdGarantia" />
+        </div>
+
+        <div class="form-group">
+            <label for="idproducto"> IdProducto: </label>
+            <label for="idproducto" name="IdProducto">@Model.IdProducto </label>
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+        </div>
+
+        <div class="form-group">
+            <label for="estado"> Estado: </label>
+            <label for="estado" name="Estado">@Model.Estado </label>
+            <input type="hidden" name="Estado" value="@Model.Estado" />
+        </div>
+
+        <div class="form-group">
+            <label for="valordevuelto"> ValorDevuelto: </label>
+            <label for="valordevuelto" name="ValorDevuelto">@Model.ValorDevuelto </label>
+            <input type="hidden" name="ValorDevuelto" value="@Model.ValorDevuelto" />
+        </div>
+
+
+
+    </form>
+
+</div>
+
+
+
+

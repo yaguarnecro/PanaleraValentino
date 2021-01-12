@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+
+    <form>
+
+        <div class="form-group">
+            <label for="id"> IdFacturaVenta: </label>
+            <label for="id" name="IdFacturaVenta">@Model.IdFacturaVenta </label>
+            <input type="hidden" name="IdFacturaVenta" value="@Model.IdFacturaVenta" />
+        </div>
+
+        <div class="form-group">
+
+            <label for="idproducto"> IdProducto: </label>
+            <label for="idproducto" name="IdProducto">@Model.IdProducto </label>
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+        </div>
+
+        <div class="form-group">
+            <label for="idempleado"> IdEmpleado: </label>
+            <label for="idempleado" name="IdEmpleado">@Model.IdEmpleado </label>
+            <input type="hidden" name="IdEmpleado" value="@Model.IdEmpleado" />
+        </div>
+
+        <div class="form-group">
+            <label for="cedulacliente"> CedulaCliente: </label>
+            <label for="cedulacliente" name="CedulaCliente">@Model.CedulaCliente </label>
+            <input type="hidden" name="CedulaCliente" value="@Model.CedulaCliente" />
+        </div>
+        <div class="form-group">
+            <label for="precioproducto"> PrecioProducto: </label>
+            <label for="precioproducto" name="PrecioProducto">@Model.PrecioProducto </label>
+            <input type="hidden" name="PrecioProducto" value="@Model.PrecioProducto" />
+        </div>
+        <div class="form-group">
+            <label for="cantidad"> Cantidad: </label>
+            <label for="cantidad" name="Cantidad">@Model.Cantidad </label>
+            <input type="hidden" name="Cantidad" value="@Model.Cantidad" />
+        </div>
+        <div class="form-group">
+            <label for="preciototal"> PrecioTotal: </label>
+            <label for="preciototal" name="PrecioTotal">@Model.PrecioTotal </label>
+            <input type="hidden" name="PrecioTotal" value="@Model.PrecioTotal" />
+        </div>
+        <div class="form-group">
+            <label for="iva"> Iva: </label>
+            <label for="iva" name="Iva">@Model.Iva </label>
+            <input type="hidden" name="Iva" value="@Model.Iva" />
+        </div>
+        <div class="form-group">
+            <label for="fecha"> Fecha: </label>
+            <label for="fecha" name="Fecha">@Model.Fecha </label>
+            <input type="hidden" name="Fecha" value="@Model.Fecha" />
+        </div>
+
+
+    </form>
+
+</div>
+
+

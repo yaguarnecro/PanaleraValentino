@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+
+    <div class="col-log-9">
+
+        <h2>Index</h2>
+
+    </div>
+    <div class="col-log-9">
+
+        <p><a class="btn btn-primary btn-lg" href="/TipoEmpleados/Crear" role="button"> Crear Nuevo Tipo Empleado</a> </p>
+
+    </div>
+</div>
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">Lista TipoEmpleados</div>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>idTipoEmpleado</th>
+                <th>Descripcion</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+   
+
+
+    @foreach (var Temp in Model)
+    {
+
+<tr>
+
+    <td>@Temp.IdTipoEmpleado</td>
+    <td>@Temp.Descripcion</td>
+    <td>
+
+       
+    </td>
+
+    <td> <a class="btn btn-primary btn-lg" href="/TipoEmpleados/Editar/@Temp.IdTipoEmpleado" role="button">Editar</a> </td>
+    <td> <a class="btn btn-primary btn-lg" href="/TipoEmpleados/Editar/@Temp.IdTipoEmpleado" target="_blank" role="button">Detalles</a> </td>
+    <td> <a class="btn btn-primary btn-lg" href="/TipoEmpleados/Editar/@Temp.IdTipoEmpleado" role="button">Eliminar</a> </td>
+</tr>
+
+
+    }
+
+    </table>
+</div>
